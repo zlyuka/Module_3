@@ -1,5 +1,4 @@
 calls = 0
-list_to_search = []
 
 def count_calls():
     global calls
@@ -9,22 +8,24 @@ def count_calls():
 
 
 def string_info(string):
+    count_calls()
     len(string)
     string.lower()
     string.upper()
-    count_calls()
     print(f"{len(string)},'{string.upper()}','{string.lower()}'")
 
 
-# def is_comtains(string, list_to_search):
-#     for str in list_to_search:
-#         print(str == list_to_search):
-#     pass
+def is_contains(string, list_to_search):
+    count_calls()
+    string = string.lower()
+    for str in list_to_search:
+        if str.lower() == string:
+            return True
+    return False
 
-list_to_search.append(input('Введите список в котором будет искаться соответствие '))
 
-print(list_to_search)
-string = input('Введите строку')
-string_info(string)
-# is_comtains()
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic']))  # No matches
 print(calls)
