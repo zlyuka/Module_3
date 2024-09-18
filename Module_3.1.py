@@ -12,7 +12,7 @@ def string_info(string):
     len(string)
     string.lower()
     string.upper()
-    print(f"{len(string)},'{string.upper()}','{string.lower()}'")
+    return (f"{len(string)},'{string.upper()}','{string.lower()}'")
 
 
 def is_contains(string, list_to_search):
