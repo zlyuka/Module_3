@@ -1,4 +1,3 @@
-
 def calculate_structure_sum(data_structure):
     summa = 0
     if isinstance(data_structure, dict):
